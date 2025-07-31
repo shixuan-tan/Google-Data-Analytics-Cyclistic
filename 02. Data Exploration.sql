@@ -8,7 +8,6 @@ SELECT
 FROM
     `cyclistic-capstone-2024.Cyclistic.2024_data`
 GROUP BY
-    -- List all columns here to check for exact duplicate rows
     ride_ID, rideable_type, started_at, ended_at, start_station_name, start_station_id,
     end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, member_casual
 HAVING
