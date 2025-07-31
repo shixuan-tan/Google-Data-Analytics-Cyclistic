@@ -32,25 +32,25 @@ rideable_type;
 --  monthly ride count by membership
 
 SELECT
-  month_name,
+  month,
   member_casual,
   COUNT(*) AS number_of_rides
 FROM
   `cyclistic-capstone-2024.Cyclistic.2024_cleaned_data` 
 GROUP BY
-  month_name,
+  month,
   member_casual;
 
 --  monthly average ride length by membership
 
 SELECT
-  month_name,
+  month,
   member_casual,
   AVG(ride_length_minute) AS average_ride_length
 FROM
   `cyclistic-capstone-2024.Cyclistic.2024_cleaned_data` 
 GROUP BY
-  month_name,
+  month,
   member_casual;
 
 --  day of week ride count by membership
