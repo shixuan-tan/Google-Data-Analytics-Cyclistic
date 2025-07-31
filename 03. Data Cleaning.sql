@@ -20,11 +20,7 @@ SELECT
   TIMESTAMP_DIFF(ended_at, started_at, HOUR) AS ride_length_hour,
   FORMAT_TIMESTAMP('%A', started_at) AS day_of_week, 
   FORMAT_TIMESTAMP('%H', started_at) AS hour_of_day, 
-  FORMAT_TIMESTAMP('%B', started_at) AS month_name,  
-  CASE
-    WHEN FORMAT_TIMESTAMP('%A', started_at) IN ('Saturday', 'Sunday') THEN 'Weekend'
-    ELSE 'Weekday'
-  END AS day_type
+  FORMAT_TIMESTAMP('%B', started_at) AS month
 FROM
   `cyclistic-capstone-2024.Cyclistic.2024_data` 
 WHERE
