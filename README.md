@@ -1,9 +1,11 @@
-# Google Data Analytics Capstone Project: Cyclistic 
+# Google Data Analytics Capstone Project: Cyclistic using SQL/Tableau
 
 # Introduction
 This repository contains my capstone project for the [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics). 
 I have applied the data analysis process (Ask, Prepare, Process, Analyze, Share and Act) to address a business question for a bike-share company, Cyclistic. By utilizing SQL for data cleaning, Tableau and Excel for visualization, I will provide data-driven insights and actionable recommendations.
-  
+
+Note: I have also completed a separate version of this case study using R for data cleaning, analysis and visualization, along with Tableau to visualize the top stations' coordinates. You can view that version of the case study [here]. The two projects use different years of data (2024 for SQL, 2023 for R) to intentionally analyze separate datasets for broader practice.
+
 # Background
 For the case study, I'm taking up the role of a Junior Data Analyst under the marketing analyst team at Cyclistic, a bike-share company in Chicago. Cyclistic has more than 5,800 bikes and 600 docking stations in Chicago. Bikes can be unlocked from one station and returned to any other station in the system anytime. Currently, they have 2 membership types, namely Members and Casual users. Casuals are defined as users who purchase single-ride or full-day passes, while Members are users who purchase annual memberships.
 
@@ -28,7 +30,7 @@ SQL Queries can be found in the links below:
 [03. Data Cleaning](https://github.com/shixuan-tan/Google-Data-Analytics-Cyclistic/blob/main/03.%20Data%20Cleaning.sql)  
 [04. Data Analysis](https://github.com/shixuan-tan/Google-Data-Analytics-Cyclistic/blob/main/04.%20Data%20Analysis.sql)  
 
-After uploading the 12 files into separate tables under the naming convention “`YYYYMM-data`” under 1 “Cyclistic” dataset on SQL, I've merged the 12 tables into 1 combined table for “`2024_data`”. This table contains 5,860,568 rows for the entire year of 2024, and data combination query can be found [here](https://github.com/shixuan-tan/Google-Data-Analytics-Cyclistic/blob/main/01.%20Combining%20Data.sql). 
+After uploading the 12 files into separate tables using the naming convention “`YYYYMM-data`” under 1 “Cyclistic” dataset on SQL, I've merged the 12 tables into 1 combined table for “2024_data”. This table contains 5,860,568 rows for the entire year of 2024, and data combination query can be found [here](https://github.com/shixuan-tan/Google-Data-Analytics-Cyclistic/blob/main/01.%20Combining%20Data.sql). 
 
 ## Data-exploration
 There are a total of 13 columns in the tables, with `ride_id` being the primary key:
@@ -114,11 +116,11 @@ Next, I’ve analyzed the hourly usage patterns for ride count and average ride 
 Based on the above findings, it can be concluded that casual riders travel approximately 2 times longer, but less frequently than members. These longer trips are primarily observed on weekends, during midday hours and through the spring and summer seasons, which indicates a usage pattern largely focused on leisure rides.
 
 To further understand the distinct preference between members and casuals, I have analyzed the locations of their most frequently used starting and ending stations to identify key areas of concentrated activity for each membership type.
-<img width="1249" height="999" alt="Start" src="https://github.com/user-attachments/assets/ef387ca3-af9f-4112-aefa-cf3199d36843" />
+<img width="671" height="537" alt="Start" src="https://github.com/user-attachments/assets/ef387ca3-af9f-4112-aefa-cf3199d36843" />
 
 Members are more likely to begin their trips in the stations near downtown, universities and residential areas while casual riders begin their trips near leisure spots, such as parks, lakes, the harbor and aquarium.
 
-<img width="1249" height="999" alt="End" src="https://github.com/user-attachments/assets/10094a49-d1c2-4bc8-9d22-791806a80f4b" />
+<img width="671" height="537" alt="End" src="https://github.com/user-attachments/assets/10094a49-d1c2-4bc8-9d22-791806a80f4b" />
 
 Similarly for end stations, casual riders tend to end their journey near parks and recreational areas while members end their trips close to downtown and residential areas.
 
@@ -130,21 +132,26 @@ This further confirms that casual riders are primarily using bikes for leisure a
 | :------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Total Ride Count          | Account for 63.8% of all rides, indicating a volume approximately twice that of casual riders.                                                                                                                                         | Account for 36.2% of all rides, constituting approximately one-third of overall ridership.                                                                                                                                                 |
 | Average Ride Length       | Shorter duration, averaging at 12.4 minutes.                                                                                                                                                                                         | Longer duration, averaging at 23.8 minutes (approximately twice of members).                                                                                                                                                             |
-| Purpose of bike usage     | Primarily use bikes for daily commutes on weekdays, with heavier usage during commute hours in the morning (6-8AM) and evenings (4-6PM), with higher bike usage from spring to summer seasons.                                                                    | Mostly leisure-orientated, predominantly during mid-days on weekends, with peak season from late spring to early summer months.                                                                                                            |
+| Purpose of bike usage     | Primarily use bikes for daily commutes on weekdays, with heavier usage during commute hours in the morning (7-9AM) and evenings (4-6PM), with higher bike usage from spring to summer seasons.                                                                    | Mostly leisure-orientated, predominantly during mid-days on weekends, with peak season from late spring to early summer months.                                                                                                            |
 | Preferred Locations       | Bike rentals’ start and end stations are concentrated near residential areas and the downtown.                                                                                                                                         | Tend to rent and return bikes near recreational sites such as parks, harbor, lakes and aquarium.                                                                                                                                         |
 
 # Act
 Based on these differentiating usage patterns, I recommend the following marketing and operational strategies to Moreno and her team, aimed at increasing annual memberships:
 
-1. Introduce “Weekend Explorer Pass”
-* Create a new membership pass targeted towards weekend leisure users during the peak spring-summer months.
+1. Introduce Weekend-only Membership Plan
+* Create a new membership plan targeted towards weekend leisure users during the peak spring-summer months.
 * This pass offer a low-commitment option that appeals to weekend recreational riders and encourages them to convert into members. 
 
-2. Launch Targeted Weekend On-site Promotions
-* Organise marketing booths near top stations frequently used by casual riders on weekends of peak season.
-* Staff can promote the new “Weekend Explorer Pass” and offer on-the-spot signup incentives to drive conversions.
+2. Develop Targeted Digital Marketing Campaign
+* Run digital campaigns that emphasizes the cost savings of a weekend-only membership plan to encourage conversion
+* These ads can be delivered to casual riders using first-party custom audience targeting, or through geo-targeting to reach those in popular leisure spots during weekends.
 
-3. Optimise Bike Rebalancing for Weekend Leisure Demand
+3.Launch Targeted Weekend On-site Promotions
+* Organise marketing booths near top stations frequently used by casual riders on weekends of peak season.
+* Staff can promote the new weekend-only membership plan and offer on-the-spot signup incentives to drive conversions.
+
+4. Optimise Bike Rebalancing for Weekend Leisure Demand
 * Implement a dynamic bike rebalancing program that anticipates and meets the weekend surge in casual ridership around leisure areas.
 * Cyclistic can reallocate bikes from downtown/commuter areas to key leisure attractions on Friday evenings, and then shifting them back on Sunday nights.
 * This ensures bike availability when and where casual riders need them, enhancing user experience and making membership more appealing.
+
