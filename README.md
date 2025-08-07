@@ -146,7 +146,7 @@ Based on these differentiating usage patterns, I recommend the following marketi
 * Run digital campaigns that emphasizes the cost savings of a weekend-only membership plan to encourage conversion
 * These ads can be delivered to casual riders using first-party custom audience targeting, or through geo-targeting to reach those in popular leisure spots during weekends.
 
-3.Launch Targeted Weekend On-site Promotions
+3. Launch Targeted Weekend On-site Promotions
 * Organise marketing booths near top stations frequently used by casual riders on weekends of peak season.
 * Staff can promote the new weekend-only membership plan and offer on-the-spot signup incentives to drive conversions.
 
